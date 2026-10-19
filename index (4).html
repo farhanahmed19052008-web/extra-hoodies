@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cozy | Heavyweight Hoodies</title>
+<meta name="description" content="Heavyweight fleece hoodies made to move. Soft, warm and built to last.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Manrope:wght@400;500;700&family=Galada&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+<!-- Hoodie artwork: edit colours with --hoodie / --hoodie-dark in style.css -->
+<svg class="sprite" aria-hidden="true">
+  <defs>
+    <linearGradient id="shade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".22"/>
+      <stop offset=".5" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#000" stop-opacity=".35"/>
+    </linearGradient>
+    <g id="parts">
+      <path d="M130 150 Q118 36 200 30 Q282 36 270 150 Q200 192 130 150Z"/>
+      <path d="M118 140 L62 175 L28 370 L84 382 L112 250Z"/>
+      <path d="M282 140 L338 175 L372 370 L316 382 L288 250Z"/>
+      <path d="M118 140 Q200 172 282 140 L300 400 Q200 430 100 400Z"/>
+      <path d="M28 370 L84 382 L80 410 L24 398Z"/>
+      <path d="M372 370 L316 382 L320 410 L376 398Z"/>
+      <path d="M100 400 Q200 430 300 400 L298 426 Q200 456 102 426Z"/>
+    </g>
+    <symbol id="hoodie-art" viewBox="0 0 400 460">
+      <g style="fill:var(--hoodie)"><use href="#parts"/></g>
+      <path d="M152 142 Q150 72 200 66 Q250 72 248 142 Q200 172 152 142Z" style="fill:var(--hoodie-dark)"/>
+      <path d="M142 322 L258 322 L274 388 Q200 404 126 388Z" style="fill:var(--hoodie)"/>
+      <g style="fill:url(#shade)"><use href="#parts"/><path d="M142 322 L258 322 L274 388 Q200 404 126 388Z"/></g>
+      <g fill="none" stroke="rgba(0,0,0,.28)" stroke-width="3" stroke-linecap="round">
+        <path d="M118 140 L112 250"/><path d="M282 140 L288 250"/>
+        <path d="M142 322 L258 322"/><path d="M200 172 L200 322"/>
+        <path d="M100 400 Q200 430 300 400"/>
+      </g>
+      <g stroke="#fff" stroke-width="4" stroke-linecap="round" fill="#fff">
+        <path d="M186 168 Q182 215 180 252" fill="none"/><path d="M214 168 Q218 215 220 252" fill="none"/>
+        <circle cx="180" cy="256" r="5"/><circle cx="220" cy="256" r="5"/>
+      </g>
+    </symbol>
+  </defs>
+</svg>
+
+<div id="bubbles-container"></div>
+
+<header class="header">
+  <div class="logo">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/><path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    <span>Cozy</span>
+  </div>
+  <nav class="nav glass">
+    <a href="#" class="nav-item active">Home</a>
+    <a href="#" class="nav-item">Fabric</a>
+    <a href="#" class="nav-item">Fit</a>
+    <a href="#" class="nav-item">Care</a>
+    <a href="#" class="nav-item">Reviews</a>
+  </nav>
+  <button class="contact-btn">Contact Us</button>
+</header>
+
+<main class="hero">
+  <div class="hero-content">
+
+    <div class="hero-left">
+      <h1 class="main-title"><span class="outline">Stay</span><br>Cozy</h1>
+      <p class="description">
+        Heavyweight fleece with a relaxed fit. <br>
+        A hood that holds its shape — <br>
+        built for cold mornings and late nights.
+      </p>
+      <div class="cta-group">
+        <button class="primary-btn">Shop Now <span class="plus-icon">+</span></button>
+      </div>
+      <div class="award-badge">
+        <div class="award-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 15L15 18L19 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <div class="award-text">
+          <span class="award-title">SOFT FLEECE</span>
+          <span class="award-subtitle">400 GSM HEAVYWEIGHT COTTON</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="orbs-bg">
+      <div class="orb star o7"></div><div class="orb ring o8"></div><div class="orb star o9"></div>
+    </div>
+
+    <div class="hero-center">
+      <div id="product" class="main-product">
+        <svg class="hoodie-svg" viewBox="0 0 400 460" role="img" aria-label="Hoodie"><use href="#hoodie-art"/></svg>
+      </div>
+    </div>
+
+    <div class="orbs-fg">
+      <div class="orb star o1"></div><div class="orb ring o2"></div><div class="orb star o3"></div>
+      <div class="orb ring o4"></div><div class="orb star o5"></div><div class="orb ring o6"></div>
+    </div>
+
+    <div class="hero-right">
+      <div class="product-carousel">
+        <div class="carousel-cards">
+          <div class="card active" data-flavor="cream" data-hoodie="#f3e9dc" data-dark="#cdbba3" style="--hoodie:#f3e9dc;--hoodie-dark:#cdbba3">
+            <svg class="thumb" viewBox="0 0 400 460"><use href="#hoodie-art"/></svg>
+            <div class="card-info"><span>Cloud Cream</span><span>$59</span></div>
+          </div>
+          <div class="card" data-flavor="pink" data-hoodie="#fbcfe8" data-dark="#d99bbd" style="--hoodie:#fbcfe8;--hoodie-dark:#d99bbd">
+            <svg class="thumb" viewBox="0 0 400 460"><use href="#hoodie-art"/></svg>
+            <div class="card-info"><span>Blush Pink</span><span>$59</span></div>
+          </div>
+        </div>
+        <div class="carousel-nav"><button class="nav-arrow">←</button><button class="nav-arrow">→</button></div>
+      </div>
+      <h2 class="side-title"><span class="outline">Made to</span><br>Move</h2>
+    </div>
+
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
